@@ -1,0 +1,5 @@
+<h3>Room: {{gameID}} - {{firstPlayer}} starts</h3>
+<div class="gameBoard">
+<div class="card {{card.type}} {{card.status}} {{card.selected}}" ng-repeat="card in board track by $index" ng-click="select(card, $index)" ng-class="{'selected': selectedCard == card}">{{card.word}}</div>
+</div>
+<button ng-click="pickCard()">Confirm Selection</button>

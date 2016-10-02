@@ -1,0 +1,6 @@
+<h2>Room ID: {{gameID}}</h2>
+<p ng-show="host">You are the host of this game</p>
+<button ng-click="start()" ng-show="host">Start Game</button>
+<ul class="playerList">
+<li ng-repeat="player in players" ng-class="checkCurrent(player)">{{player.name}}</li>
+</ul>

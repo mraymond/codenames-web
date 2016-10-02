@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="Buzz" ng-controller="AppCtrl" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App</title>
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="http://deb.work.novify.me:4454/socket.io/socket.io.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div ng-view></div>
+    <div>
+    	<div class="toast" ng-repeat="toast in toasts track by $index" toast>{{toast}}</div>
+    </div>
+</body>
+</html>
