@@ -61,10 +61,6 @@ app.controller('LobbyController', ['$scope', '$location', 'socket', 'user', 'gam
         game.gameID = data.gameID;
         if (data.users === undefined) {
           game.host = true;
-          /*game.players.push({
-            name: user.name,
-            wins: 0
-          });*/
         } else {
           game.host = false;
           game.players.push({
@@ -83,7 +79,6 @@ app.controller('LobbyController', ['$scope', '$location', 'socket', 'user', 'gam
         game.players.push({
           name: data.user
         });
-        //$scope.players.push({name: data.user});
       }
     });
     $scope.$on('socket:GAMEOVER', function(ev, data) {
