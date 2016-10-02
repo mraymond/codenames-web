@@ -4,13 +4,13 @@ app.controller('UserController', ['$scope', '$location', 'user', 'socket', 'game
     $scope.loaded = false;
     // Start Controller methods
     $scope.login = function() {
-      socket.emit("JOINGAME", {
-        gameID: $scope.room
-      });
-      user.host = false;
-      user.logged = true;
-    }
-    //socket.forward('WELCOME', $scope);
+        socket.emit("JOINGAME", {
+          gameID: $scope.room
+        });
+        user.host = false;
+        user.logged = true;
+      }
+      //socket.forward('WELCOME', $scope);
     socket.forward('NAMETAKEN', $scope);
     socket.forward('JOINGAME', $scope);
     socket.forward('INIT', $scope);
