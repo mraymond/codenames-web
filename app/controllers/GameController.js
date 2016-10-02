@@ -53,7 +53,7 @@ app.controller('GameController', ['$scope', '$location', 'user', 'socket', 'game
 
     $scope.$on("socket:PICKCARD", function(ev, data) {
       $scope.board[data.index].spySelected = "flopped"
-      // Display buzzer for players
+        // Display buzzer for players
     });
 
     $scope.$on("socket:RESTART", function(ev, data) {
